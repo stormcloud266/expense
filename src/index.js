@@ -12,8 +12,10 @@ import "./index.css"
 const store = configureStore()
 
 store.dispatch(addExpense({ description: "water bill", amount: 50000 }))
-store.dispatch(addExpense({ description: "rent", amount: 50000 }))
-store.dispatch(setTextFilters("rent"))
+store.dispatch(
+	addExpense({ description: "gas bill", amount: 50000, createdAt: 1000 })
+)
+store.dispatch(addExpense({ description: "rent", amount: 109500 }))
 
 const app = (
 	<Provider store={store}>
