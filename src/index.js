@@ -8,6 +8,7 @@ import { getVisibleExpenses } from "./selectors/expenses"
 import AppRouter from "./routers/AppRouter"
 import reportWebVitals from "./reportWebVitals"
 import "./index.css"
+import "react-dates/initialize"
 
 const store = configureStore()
 
