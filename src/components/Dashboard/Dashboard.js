@@ -1,10 +1,13 @@
-import React from 'react'
-import styles from './styles.module.css'
+import React from "react"
+import ExpenseList from "../ExpenseList/ExpenseList"
+import styles from "./styles.module.css"
 
 const Dashboard = () => {
-  return (
-     
-     <div>Dashboard</div>
-)}
+	return (
+		<div>
+			<ExpenseList />
+		</div>
+	)
+}
 
 export default Dashboard
