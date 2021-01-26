@@ -6,6 +6,7 @@ import AppRouter from './routers/AppRouter'
 import reportWebVitals from './reportWebVitals'
 import './index.css'
 import 'react-dates/initialize'
+import './firebase/firebase'
 
 const store = configureStore()
 
