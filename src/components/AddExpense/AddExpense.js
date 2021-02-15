@@ -10,7 +10,7 @@ const AddExpense = ({ dispatch, history }) => (
 		<ExpenseForm
 			onSubmit={(expense) => {
 				dispatch(startAddExpense(expense))
-				history.push('/')
+				history.push('/dashboard')
 			}}
 		/>
 	</div>
