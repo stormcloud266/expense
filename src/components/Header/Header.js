@@ -8,14 +8,11 @@ const Header = ({ startLogout }) => (
 	<header>
 		<h1>Expenses</h1>
 		<nav>
-			<NavLink to='/dashboard' activeClassName='is-active' exact={true}>
+			<NavLink to='/dashboard' activeClassName='is-active'>
 				Home
 			</NavLink>
-			<NavLink to='/create' activeClassName='is-active' exact={true}>
-				Create
-			</NavLink>
-			<NavLink to='/help' activeClassName='is-active' exact={true}>
-				Help
+			<NavLink to='/create' activeClassName='is-active'>
+				Create Expense
 			</NavLink>
 			<button onClick={startLogout}>Log Out</button>
 		</nav>
