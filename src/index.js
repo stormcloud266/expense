@@ -4,6 +4,7 @@ import { Provider } from 'react-redux'
 import configureStore from './store/configureStore'
 import AppRouter, { history } from './routers/AppRouter'
 import { startSetExpenses } from './actions/expenses'
+import { login, logout } from './actions/auth'
 import reportWebVitals from './reportWebVitals'
 import './index.css'
 import 'react-dates/initialize'
@@ -33,7 +34,7 @@ ReactDOM.render(<p>loading...</p>, document.getElementById('root'))
 
 firebase.auth().onAuthStateChanged((user) => {
 	if (user) {
-		console.log('user logged in')
+		store.dispatch(login(user.uid))
 		store.dispatch(startSetExpenses()).then(() => {
 			renderApp()
 		})
@@ -41,7 +42,7 @@ firebase.auth().onAuthStateChanged((user) => {
 			history.push('/dashboard')
 		}
 	} else {
-		console.log('user logged out')
+		store.dispatch(logout())
 		renderApp()
 		history.push('/')
 	}
